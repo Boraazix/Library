@@ -15,6 +15,7 @@ namespace Library
         public frmMain()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void mnuExit_Click(object sender, EventArgs e)

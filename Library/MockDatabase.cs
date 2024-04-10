@@ -10,7 +10,7 @@ namespace Library
     {
         public static List<Author> Authors { get; set; }
         public static List<Publisher> Publishers { get; set; }
-        public static List<Book> Books { get; set; }
+        public static List<Book> Books { get;  set; }
 
         static MockDatabase()
         {
@@ -45,6 +45,15 @@ namespace Library
                 {
                     authors.Add(a);
                 }
+            }
+            return authors;
+        }
+        public static List<Author> FindAuthorByCodeList(List<Int64> c)
+        {
+            List<Author> authors = new List<Author>();
+            foreach (Int64 i in c)
+            {
+                authors.Add(FindAuthorById(i));
             }
             return authors;
         }

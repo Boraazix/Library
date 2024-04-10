@@ -14,11 +14,11 @@ namespace Library
         public String Title { get; set; }
         public String Description { get; set; }
         public List<Author> Authors { get; set; }
-        public Publisher PublishingCompany { get; set; }
+        public Publisher Publisher { get; set; }
         public DateTime Publication { get; set; }
         public short Pages { get; set; }
         public short Edition { get; set; }
-        public DateTime Release { get; set; }
+        public Boolean Release { get; set; }
 
         static Book()
         {
@@ -31,16 +31,16 @@ namespace Library
             Title = "Untitled";
             Description = "Without description";
             Authors = new List<Author>();
-            PublishingCompany = new Publisher();
+            Publisher = new Publisher();
         }
 
-        public Book(long isbn, string title, string description, List<Author> authors, Publisher publishingCompany, DateTime publication, short pages, short edition, DateTime release) : this()
+        public Book(Int64 isbn, string title, string description, List<Author> authors, Publisher publishingCompany, DateTime publication, short pages, short edition, Boolean release) : this()
         {
             Isbn = isbn;
             Title = title;
             Description = description;
             Authors = authors;
-            PublishingCompany = publishingCompany;
+            Publisher = publishingCompany;
             Publication = publication;
             Pages = pages;
             Edition = edition;
@@ -49,7 +49,7 @@ namespace Library
 
         public override string ToString()
         {
-            return Code + " | "+ Title + " | " + PublishingCompany.Name;
+            return Code + " | "+ Title + " | " + Publisher.Name;
         }
     }
 }
