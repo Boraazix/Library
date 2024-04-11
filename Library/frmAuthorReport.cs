@@ -36,7 +36,7 @@ namespace Library
             try
             {
                 author.Add(MockDatabase.FindAuthorById(Convert.ToInt64(txtCode.Text)));
-                lstAuthors.DataSource = author;
+                lstAuthors.DataSource = author.OrderBy(a => a.Name).ToList();
             }
             catch (Exception)
             {
@@ -48,7 +48,7 @@ namespace Library
         {
             try
             {
-                lstAuthors.DataSource = MockDatabase.FindAuthorByPartialName(txtName.Text);
+                lstAuthors.DataSource = MockDatabase.FindAuthorByPartialName(txtName.Text).OrderBy(a => a.Name).ToList();
             }
             catch (Exception)
             {

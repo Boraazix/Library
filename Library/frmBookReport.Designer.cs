@@ -28,19 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            pnlMain = new Panel();
+            dgvMain = new DataGridView();
+            pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMain).BeginInit();
+            SuspendLayout();
+            // 
+            // pnlMain
+            // 
+            pnlMain.Controls.Add(dgvMain);
+            pnlMain.Location = new Point(0, 0);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new Size(1090, 500);
+            pnlMain.TabIndex = 0;
+            // 
+            // dgvMain
+            // 
+            dgvMain.AllowUserToAddRows = false;
+            dgvMain.AllowUserToDeleteRows = false;
+            dgvMain.AllowUserToOrderColumns = true;
+            dgvMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMain.Location = new Point(12, 12);
+            dgvMain.Name = "dgvMain";
+            dgvMain.ReadOnly = true;
+            dgvMain.RowTemplate.Height = 25;
+            dgvMain.Size = new Size(1066, 476);
+            dgvMain.TabIndex = 0;
             // 
             // frmBookReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmBookReport";
-            this.Text = "Book Report";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1090, 500);
+            Controls.Add(pnlMain);
+            MaximizeBox = false;
+            MaximumSize = new Size(1106, 539);
+            MinimumSize = new Size(1106, 539);
+            Name = "frmBookReport";
+            Text = "Book Report";
+            pnlMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvMain).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel pnlMain;
+        private DataGridView dgvMain;
     }
 }

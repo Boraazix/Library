@@ -119,11 +119,12 @@ namespace Library
             {
                 Book book = new Book(Int64.Parse(txtIsbn.Text), txtTitle.Text, txtDescription.Text, MockDatabase.FindAuthorByCodeList(_selectedAuthors), (Publisher)cmbPublishers.SelectedItem, dtpPublication.Value, Int16.Parse(nudPages.Value.ToString()), Int16.Parse(nudEdition.Value.ToString()), chkRelease.Checked);
                 MockDatabase.Books.Add(book);
+                MockDatabase.SetBookToAuthors(book.Code, _selectedAuthors);
                 MessageBox.Show("Book successfully registered!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtIsbn.Text = ""; txtTitle.Text = ""; txtDescription.Text = ""; txtAuthor.Text = "";
+                lstAuthors.DataSource = MockDatabase.Authors.OrderBy(a => a.Name).ToList();
                 _selectedAuthors.Clear(); lstSelectedAuthors.DataSource = new List<Author> { }; dtpPublication.Value = DateTime.Now;
                 nudPages.Value = 0; nudEdition.Value = 0; chkRelease.Checked = false;
-
             }
         }
     }

@@ -27,6 +27,25 @@ namespace Library
             }
             return null;
         }
+        public static List<Book> FindBooksByAuthor(Int64 authorId)
+        {
+            List<Book> books = new List<Book>();
+            foreach (Book b in Books)
+            {
+                if(b.Authors.Contains(FindAuthorById(authorId)))
+                {
+                    books.Add(b);
+                }
+            }
+            return books;
+        }
+        public static void SetBookToAuthors(Int64 bookId, List<Int64> AuthorsId)
+        {
+            foreach (Int64 authorId in AuthorsId)
+            {
+                MockDatabase.FindAuthorById(authorId).Books.Add(FindBookById(bookId));
+            }
+        }
         public static Author FindAuthorById(Int64 c)
         {
             foreach (Author a in Authors)
@@ -56,6 +75,30 @@ namespace Library
                 authors.Add(FindAuthorById(i));
             }
             return authors;
+        }
+        public static List<Book> FindBooksByAuthorAndPublisher(Int64 authorId, Int64 publisherId)
+        {
+            List<Book> books = new List<Book>();
+            foreach (Book b in Books)
+            {
+                if(b.Authors.Contains(FindAuthorById(authorId)) && b.Publisher == FindPublisherById(publisherId))
+                {
+                    books.Add(b);
+                }
+            }
+            return books;
+        }
+        public static List<Book> FindBooksByPublisher(Int64 publisherId)
+        {
+            List<Book> books = new List<Book>();
+            foreach (Book b in Books)
+            {
+                if (b.Publisher.Code == publisherId)
+                {
+                    books.Add(b);
+                }
+            }
+            return books;
         }
         public static Publisher FindPublisherById(Int64 c)
         {

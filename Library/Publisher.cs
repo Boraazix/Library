@@ -19,12 +19,12 @@ namespace Library
 
         public Publisher()
         {
-            Code = Coder++;
             Name = "Unnamed";
         }
 
         public Publisher(String name) : this()
         {
+            Code = Coder++;
             Name = name;
         }
 

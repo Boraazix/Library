@@ -14,6 +14,16 @@ namespace Library
         public String Title { get; set; }
         public String Description { get; set; }
         public List<Author> Authors { get; set; }
+        public String Author 
+        {
+            get
+            {
+                if (Authors.Count > 0)
+                    return Authors[0].Name;
+                else
+                    return "No authors";
+            }
+        }
         public Publisher Publisher { get; set; }
         public DateTime Publication { get; set; }
         public short Pages { get; set; }

@@ -36,7 +36,7 @@ namespace Library
             try
             {
                 publisher.Add(MockDatabase.FindPublisherById(Convert.ToInt64(txtCode.Text)));
-                lstPublishers.DataSource = publisher;
+                lstPublishers.DataSource = publisher.OrderBy(p => p.Name).ToList();
             }
             catch (Exception)
             {
@@ -48,7 +48,7 @@ namespace Library
         {
             try
             {
-                lstPublishers.DataSource = MockDatabase.FindPublisherByPartialName(txtName.Text);
+                lstPublishers.DataSource = MockDatabase.FindPublisherByPartialName(txtName.Text).OrderBy(p => p.Name).ToList();
             }
             catch (Exception)
             {

@@ -11,6 +11,7 @@ namespace Library
         public static Int64 Coder { get; private set; }
         public Int64 Code { get; private set; }
         public String Name { get; set; }
+        public List<Book> Books { get; set; }
 
         static Author()
         {
@@ -19,18 +20,19 @@ namespace Library
 
         public Author() 
         {
-            Code = Coder++;
             Name = "Unnamed";
+            Books = new List<Book>();
         }
 
         public Author(String name) : this()
         {
+            Code = Coder++;
             Name = name;
         }
 
         public override string ToString()
         {
-            return Code + " | " + Name;
+            return Code + " | " + Name + ", " + Books.Count() + " book(s) registered.";
         }
     }
 }

@@ -28,332 +28,354 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.chkRelease = new System.Windows.Forms.CheckBox();
-            this.nudEdition = new System.Windows.Forms.NumericUpDown();
-            this.lblEdition = new System.Windows.Forms.Label();
-            this.nudPages = new System.Windows.Forms.NumericUpDown();
-            this.lblPages = new System.Windows.Forms.Label();
-            this.dtpPublication = new System.Windows.Forms.DateTimePicker();
-            this.lblPublication = new System.Windows.Forms.Label();
-            this.lblPublisher = new System.Windows.Forms.Label();
-            this.cmbPublishers = new System.Windows.Forms.ComboBox();
-            this.lblSelectedAuthors = new System.Windows.Forms.Label();
-            this.lblSearching = new System.Windows.Forms.Label();
-            this.lblInstructions = new System.Windows.Forms.Label();
-            this.lstSelectedAuthors = new System.Windows.Forms.ListBox();
-            this.lstAuthors = new System.Windows.Forms.ListBox();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.lblAuthors = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.txtIsbn = new System.Windows.Forms.TextBox();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblIsbn = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.lblCode = new System.Windows.Forms.Label();
-            this.pnlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEdition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPages)).BeginInit();
-            this.SuspendLayout();
+            pnlMain = new Panel();
+            grpDetails = new GroupBox();
+            lstSelectedAuthors = new ListBox();
+            lblAuthors = new Label();
+            btnRegister = new Button();
+            txtAuthor = new TextBox();
+            chkRelease = new CheckBox();
+            lstAuthors = new ListBox();
+            nudEdition = new NumericUpDown();
+            lblInstructions = new Label();
+            lblEdition = new Label();
+            lblSearching = new Label();
+            nudPages = new NumericUpDown();
+            lblSelectedAuthors = new Label();
+            lblPages = new Label();
+            cmbPublishers = new ComboBox();
+            dtpPublication = new DateTimePicker();
+            lblPublisher = new Label();
+            lblPublication = new Label();
+            grpMainData = new GroupBox();
+            txtCode = new TextBox();
+            lblCode = new Label();
+            lblIsbn = new Label();
+            lblTitle = new Label();
+            txtTitle = new TextBox();
+            txtIsbn = new TextBox();
+            lblDescription = new Label();
+            txtDescription = new TextBox();
+            pnlMain.SuspendLayout();
+            grpDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudEdition).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPages).BeginInit();
+            grpMainData.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlMain
             // 
-            this.pnlMain.Controls.Add(this.btnRegister);
-            this.pnlMain.Controls.Add(this.chkRelease);
-            this.pnlMain.Controls.Add(this.nudEdition);
-            this.pnlMain.Controls.Add(this.lblEdition);
-            this.pnlMain.Controls.Add(this.nudPages);
-            this.pnlMain.Controls.Add(this.lblPages);
-            this.pnlMain.Controls.Add(this.dtpPublication);
-            this.pnlMain.Controls.Add(this.lblPublication);
-            this.pnlMain.Controls.Add(this.lblPublisher);
-            this.pnlMain.Controls.Add(this.cmbPublishers);
-            this.pnlMain.Controls.Add(this.lblSelectedAuthors);
-            this.pnlMain.Controls.Add(this.lblSearching);
-            this.pnlMain.Controls.Add(this.lblInstructions);
-            this.pnlMain.Controls.Add(this.lstSelectedAuthors);
-            this.pnlMain.Controls.Add(this.lstAuthors);
-            this.pnlMain.Controls.Add(this.txtAuthor);
-            this.pnlMain.Controls.Add(this.lblAuthors);
-            this.pnlMain.Controls.Add(this.txtDescription);
-            this.pnlMain.Controls.Add(this.lblDescription);
-            this.pnlMain.Controls.Add(this.txtIsbn);
-            this.pnlMain.Controls.Add(this.txtTitle);
-            this.pnlMain.Controls.Add(this.lblTitle);
-            this.pnlMain.Controls.Add(this.lblIsbn);
-            this.pnlMain.Controls.Add(this.txtCode);
-            this.pnlMain.Controls.Add(this.lblCode);
-            this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(769, 303);
-            this.pnlMain.TabIndex = 0;
+            pnlMain.Controls.Add(grpDetails);
+            pnlMain.Controls.Add(grpMainData);
+            pnlMain.Location = new Point(0, 0);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new Size(808, 338);
+            pnlMain.TabIndex = 0;
             // 
-            // btnRegister
+            // grpDetails
             // 
-            this.btnRegister.Location = new System.Drawing.Point(677, 263);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
-            this.btnRegister.TabIndex = 27;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // chkRelease
-            // 
-            this.chkRelease.AutoSize = true;
-            this.chkRelease.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chkRelease.Location = new System.Drawing.Point(651, 217);
-            this.chkRelease.Name = "chkRelease";
-            this.chkRelease.Size = new System.Drawing.Size(101, 23);
-            this.chkRelease.TabIndex = 26;
-            this.chkRelease.Text = "New release";
-            this.chkRelease.UseVisualStyleBackColor = true;
-            // 
-            // nudEdition
-            // 
-            this.nudEdition.Location = new System.Drawing.Point(587, 245);
-            this.nudEdition.Name = "nudEdition";
-            this.nudEdition.Size = new System.Drawing.Size(51, 23);
-            this.nudEdition.TabIndex = 24;
-            // 
-            // lblEdition
-            // 
-            this.lblEdition.AutoSize = true;
-            this.lblEdition.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEdition.Location = new System.Drawing.Point(520, 245);
-            this.lblEdition.Name = "lblEdition";
-            this.lblEdition.Size = new System.Drawing.Size(61, 21);
-            this.lblEdition.TabIndex = 23;
-            this.lblEdition.Text = "Edition:";
-            // 
-            // nudPages
-            // 
-            this.nudPages.Location = new System.Drawing.Point(587, 216);
-            this.nudPages.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.nudPages.Name = "nudPages";
-            this.nudPages.Size = new System.Drawing.Size(51, 23);
-            this.nudPages.TabIndex = 22;
-            // 
-            // lblPages
-            // 
-            this.lblPages.AutoSize = true;
-            this.lblPages.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPages.Location = new System.Drawing.Point(528, 216);
-            this.lblPages.Name = "lblPages";
-            this.lblPages.Size = new System.Drawing.Size(53, 21);
-            this.lblPages.TabIndex = 21;
-            this.lblPages.Text = "Pages:";
-            // 
-            // dtpPublication
-            // 
-            this.dtpPublication.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPublication.Location = new System.Drawing.Point(412, 244);
-            this.dtpPublication.Name = "dtpPublication";
-            this.dtpPublication.Size = new System.Drawing.Size(78, 23);
-            this.dtpPublication.TabIndex = 20;
-            // 
-            // lblPublication
-            // 
-            this.lblPublication.AutoSize = true;
-            this.lblPublication.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPublication.Location = new System.Drawing.Point(316, 245);
-            this.lblPublication.Name = "lblPublication";
-            this.lblPublication.Size = new System.Drawing.Size(90, 21);
-            this.lblPublication.TabIndex = 19;
-            this.lblPublication.Text = "Publication:";
-            // 
-            // lblPublisher
-            // 
-            this.lblPublisher.AutoSize = true;
-            this.lblPublisher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPublisher.Location = new System.Drawing.Point(328, 213);
-            this.lblPublisher.Name = "lblPublisher";
-            this.lblPublisher.Size = new System.Drawing.Size(78, 21);
-            this.lblPublisher.TabIndex = 18;
-            this.lblPublisher.Text = "Publisher:";
-            // 
-            // cmbPublishers
-            // 
-            this.cmbPublishers.FormattingEnabled = true;
-            this.cmbPublishers.Location = new System.Drawing.Point(412, 215);
-            this.cmbPublishers.Name = "cmbPublishers";
-            this.cmbPublishers.Size = new System.Drawing.Size(109, 23);
-            this.cmbPublishers.TabIndex = 17;
-            // 
-            // lblSelectedAuthors
-            // 
-            this.lblSelectedAuthors.AutoSize = true;
-            this.lblSelectedAuthors.Location = new System.Drawing.Point(591, 184);
-            this.lblSelectedAuthors.Name = "lblSelectedAuthors";
-            this.lblSelectedAuthors.Size = new System.Drawing.Size(94, 15);
-            this.lblSelectedAuthors.TabIndex = 16;
-            this.lblSelectedAuthors.Text = "Selected authors";
-            // 
-            // lblSearching
-            // 
-            this.lblSearching.AutoSize = true;
-            this.lblSearching.Location = new System.Drawing.Point(394, 184);
-            this.lblSearching.Name = "lblSearching";
-            this.lblSearching.Size = new System.Drawing.Size(59, 15);
-            this.lblSearching.TabIndex = 15;
-            this.lblSearching.Text = "Searching";
-            // 
-            // lblInstructions
-            // 
-            this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(539, 19);
-            this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(144, 15);
-            this.lblInstructions.TabIndex = 14;
-            this.lblInstructions.Text = "Drag and drop the author.";
+            grpDetails.Controls.Add(lstSelectedAuthors);
+            grpDetails.Controls.Add(lblAuthors);
+            grpDetails.Controls.Add(btnRegister);
+            grpDetails.Controls.Add(txtAuthor);
+            grpDetails.Controls.Add(chkRelease);
+            grpDetails.Controls.Add(lstAuthors);
+            grpDetails.Controls.Add(nudEdition);
+            grpDetails.Controls.Add(lblInstructions);
+            grpDetails.Controls.Add(lblEdition);
+            grpDetails.Controls.Add(lblSearching);
+            grpDetails.Controls.Add(nudPages);
+            grpDetails.Controls.Add(lblSelectedAuthors);
+            grpDetails.Controls.Add(lblPages);
+            grpDetails.Controls.Add(cmbPublishers);
+            grpDetails.Controls.Add(dtpPublication);
+            grpDetails.Controls.Add(lblPublisher);
+            grpDetails.Controls.Add(lblPublication);
+            grpDetails.Location = new Point(333, 12);
+            grpDetails.Name = "grpDetails";
+            grpDetails.Size = new Size(463, 315);
+            grpDetails.TabIndex = 1;
+            grpDetails.TabStop = false;
+            grpDetails.Text = "Details";
             // 
             // lstSelectedAuthors
             // 
-            this.lstSelectedAuthors.AllowDrop = true;
-            this.lstSelectedAuthors.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lstSelectedAuthors.FormattingEnabled = true;
-            this.lstSelectedAuthors.ItemHeight = 17;
-            this.lstSelectedAuthors.Location = new System.Drawing.Point(539, 40);
-            this.lstSelectedAuthors.Name = "lstSelectedAuthors";
-            this.lstSelectedAuthors.Size = new System.Drawing.Size(213, 140);
-            this.lstSelectedAuthors.TabIndex = 13;
-            this.lstSelectedAuthors.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstAll_DragDrop);
-            this.lstSelectedAuthors.DragEnter += new System.Windows.Forms.DragEventHandler(this.lstAll_DragEnter);
-            this.lstSelectedAuthors.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstAll_MouseDown);
-            // 
-            // lstAuthors
-            // 
-            this.lstAuthors.AllowDrop = true;
-            this.lstAuthors.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lstAuthors.FormattingEnabled = true;
-            this.lstAuthors.ItemHeight = 17;
-            this.lstAuthors.Location = new System.Drawing.Point(320, 41);
-            this.lstAuthors.Name = "lstAuthors";
-            this.lstAuthors.Size = new System.Drawing.Size(213, 140);
-            this.lstAuthors.TabIndex = 12;
-            this.lstAuthors.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstAll_DragDrop);
-            this.lstAuthors.DragEnter += new System.Windows.Forms.DragEventHandler(this.lstAll_DragEnter);
-            this.lstAuthors.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstAll_MouseDown);
-            // 
-            // txtAuthor
-            // 
-            this.txtAuthor.Location = new System.Drawing.Point(394, 12);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.PlaceholderText = "Search by author\'s name";
-            this.txtAuthor.Size = new System.Drawing.Size(139, 23);
-            this.txtAuthor.TabIndex = 11;
-            this.txtAuthor.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAuthor_KeyUp);
+            lstSelectedAuthors.AllowDrop = true;
+            lstSelectedAuthors.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lstSelectedAuthors.FormattingEnabled = true;
+            lstSelectedAuthors.ItemHeight = 17;
+            lstSelectedAuthors.Location = new Point(234, 49);
+            lstSelectedAuthors.Name = "lstSelectedAuthors";
+            lstSelectedAuthors.Size = new Size(213, 157);
+            lstSelectedAuthors.TabIndex = 13;
+            lstSelectedAuthors.DragDrop += lstAll_DragDrop;
+            lstSelectedAuthors.DragEnter += lstAll_DragEnter;
+            lstSelectedAuthors.MouseDown += lstAll_MouseDown;
             // 
             // lblAuthors
             // 
-            this.lblAuthors.AutoSize = true;
-            this.lblAuthors.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAuthors.Location = new System.Drawing.Point(320, 10);
-            this.lblAuthors.Name = "lblAuthors";
-            this.lblAuthors.Size = new System.Drawing.Size(68, 21);
-            this.lblAuthors.TabIndex = 10;
-            this.lblAuthors.Text = "Authors:";
+            lblAuthors.AutoSize = true;
+            lblAuthors.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAuthors.Location = new Point(15, 19);
+            lblAuthors.Name = "lblAuthors";
+            lblAuthors.Size = new Size(68, 21);
+            lblAuthors.TabIndex = 10;
+            lblAuthors.Text = "Authors:";
             // 
-            // txtDescription
+            // btnRegister
             // 
-            this.txtDescription.Location = new System.Drawing.Point(110, 98);
-            this.txtDescription.MaxLength = 300;
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.PlaceholderText = "Write the description of the book";
-            this.txtDescription.Size = new System.Drawing.Size(194, 188);
-            this.txtDescription.TabIndex = 9;
+            btnRegister.Location = new Point(346, 273);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(101, 23);
+            btnRegister.TabIndex = 27;
+            btnRegister.Text = "Register";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
             // 
-            // lblDescription
+            // txtAuthor
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDescription.Location = new System.Drawing.Point(12, 96);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(92, 21);
-            this.lblDescription.TabIndex = 8;
-            this.lblDescription.Text = "Description:";
+            txtAuthor.Location = new Point(89, 21);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.PlaceholderText = "Search by author's name";
+            txtAuthor.Size = new Size(139, 23);
+            txtAuthor.TabIndex = 11;
+            txtAuthor.KeyUp += txtAuthor_KeyUp;
             // 
-            // txtIsbn
+            // chkRelease
             // 
-            this.txtIsbn.Location = new System.Drawing.Point(110, 40);
-            this.txtIsbn.MaxLength = 13;
-            this.txtIsbn.Name = "txtIsbn";
-            this.txtIsbn.Size = new System.Drawing.Size(100, 23);
-            this.txtIsbn.TabIndex = 2;
-            this.txtIsbn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIsbn_KeyPress);
+            chkRelease.AutoSize = true;
+            chkRelease.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            chkRelease.Location = new Point(346, 244);
+            chkRelease.Name = "chkRelease";
+            chkRelease.Size = new Size(101, 23);
+            chkRelease.TabIndex = 26;
+            chkRelease.Text = "New release";
+            chkRelease.UseVisualStyleBackColor = true;
             // 
-            // txtTitle
+            // lstAuthors
             // 
-            this.txtTitle.Location = new System.Drawing.Point(110, 69);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.PlaceholderText = "Write the book\'s title";
-            this.txtTitle.Size = new System.Drawing.Size(194, 23);
-            this.txtTitle.TabIndex = 3;
+            lstAuthors.AllowDrop = true;
+            lstAuthors.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lstAuthors.FormattingEnabled = true;
+            lstAuthors.ItemHeight = 17;
+            lstAuthors.Location = new Point(15, 50);
+            lstAuthors.Name = "lstAuthors";
+            lstAuthors.Size = new Size(213, 157);
+            lstAuthors.TabIndex = 12;
+            lstAuthors.DragDrop += lstAll_DragDrop;
+            lstAuthors.DragEnter += lstAll_DragEnter;
+            lstAuthors.MouseDown += lstAll_MouseDown;
             // 
-            // lblTitle
+            // nudEdition
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.Location = new System.Drawing.Point(62, 67);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(42, 21);
-            this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = "Title:";
+            nudEdition.Location = new Point(282, 272);
+            nudEdition.Name = "nudEdition";
+            nudEdition.Size = new Size(51, 23);
+            nudEdition.TabIndex = 24;
             // 
-            // lblIsbn
+            // lblInstructions
             // 
-            this.lblIsbn.AutoSize = true;
-            this.lblIsbn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIsbn.Location = new System.Drawing.Point(57, 38);
-            this.lblIsbn.Name = "lblIsbn";
-            this.lblIsbn.Size = new System.Drawing.Size(47, 21);
-            this.lblIsbn.TabIndex = 5;
-            this.lblIsbn.Text = "ISBN:";
+            lblInstructions.AutoSize = true;
+            lblInstructions.Location = new Point(234, 28);
+            lblInstructions.Name = "lblInstructions";
+            lblInstructions.Size = new Size(144, 15);
+            lblInstructions.TabIndex = 14;
+            lblInstructions.Text = "Drag and drop the author.";
+            // 
+            // lblEdition
+            // 
+            lblEdition.AutoSize = true;
+            lblEdition.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEdition.Location = new Point(215, 272);
+            lblEdition.Name = "lblEdition";
+            lblEdition.Size = new Size(61, 21);
+            lblEdition.TabIndex = 23;
+            lblEdition.Text = "Edition:";
+            // 
+            // lblSearching
+            // 
+            lblSearching.AutoSize = true;
+            lblSearching.Location = new Point(89, 210);
+            lblSearching.Name = "lblSearching";
+            lblSearching.Size = new Size(59, 15);
+            lblSearching.TabIndex = 15;
+            lblSearching.Text = "Searching";
+            // 
+            // nudPages
+            // 
+            nudPages.Location = new Point(282, 243);
+            nudPages.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+            nudPages.Name = "nudPages";
+            nudPages.Size = new Size(51, 23);
+            nudPages.TabIndex = 22;
+            // 
+            // lblSelectedAuthors
+            // 
+            lblSelectedAuthors.AutoSize = true;
+            lblSelectedAuthors.Location = new Point(284, 210);
+            lblSelectedAuthors.Name = "lblSelectedAuthors";
+            lblSelectedAuthors.Size = new Size(94, 15);
+            lblSelectedAuthors.TabIndex = 16;
+            lblSelectedAuthors.Text = "Selected authors";
+            // 
+            // lblPages
+            // 
+            lblPages.AutoSize = true;
+            lblPages.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPages.Location = new Point(223, 243);
+            lblPages.Name = "lblPages";
+            lblPages.Size = new Size(53, 21);
+            lblPages.TabIndex = 21;
+            lblPages.Text = "Pages:";
+            // 
+            // cmbPublishers
+            // 
+            cmbPublishers.FormattingEnabled = true;
+            cmbPublishers.Location = new Point(107, 242);
+            cmbPublishers.Name = "cmbPublishers";
+            cmbPublishers.Size = new Size(109, 23);
+            cmbPublishers.TabIndex = 17;
+            // 
+            // dtpPublication
+            // 
+            dtpPublication.Format = DateTimePickerFormat.Short;
+            dtpPublication.Location = new Point(107, 271);
+            dtpPublication.Name = "dtpPublication";
+            dtpPublication.Size = new Size(78, 23);
+            dtpPublication.TabIndex = 20;
+            // 
+            // lblPublisher
+            // 
+            lblPublisher.AutoSize = true;
+            lblPublisher.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPublisher.Location = new Point(23, 240);
+            lblPublisher.Name = "lblPublisher";
+            lblPublisher.Size = new Size(78, 21);
+            lblPublisher.TabIndex = 18;
+            lblPublisher.Text = "Publisher:";
+            // 
+            // lblPublication
+            // 
+            lblPublication.AutoSize = true;
+            lblPublication.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPublication.Location = new Point(11, 272);
+            lblPublication.Name = "lblPublication";
+            lblPublication.Size = new Size(90, 21);
+            lblPublication.TabIndex = 19;
+            lblPublication.Text = "Publication:";
+            // 
+            // grpMainData
+            // 
+            grpMainData.Controls.Add(txtCode);
+            grpMainData.Controls.Add(lblCode);
+            grpMainData.Controls.Add(lblIsbn);
+            grpMainData.Controls.Add(lblTitle);
+            grpMainData.Controls.Add(txtTitle);
+            grpMainData.Controls.Add(txtIsbn);
+            grpMainData.Controls.Add(lblDescription);
+            grpMainData.Controls.Add(txtDescription);
+            grpMainData.Location = new Point(12, 12);
+            grpMainData.Name = "grpMainData";
+            grpMainData.Size = new Size(315, 315);
+            grpMainData.TabIndex = 0;
+            grpMainData.TabStop = false;
+            grpMainData.Text = "Main data";
             // 
             // txtCode
             // 
-            this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(110, 11);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(100, 23);
-            this.txtCode.TabIndex = 1;
+            txtCode.Enabled = false;
+            txtCode.Location = new Point(105, 21);
+            txtCode.Name = "txtCode";
+            txtCode.Size = new Size(100, 23);
+            txtCode.TabIndex = 1;
             // 
             // lblCode
             // 
-            this.lblCode.AutoSize = true;
-            this.lblCode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCode.Location = new System.Drawing.Point(55, 9);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(49, 21);
-            this.lblCode.TabIndex = 3;
-            this.lblCode.Text = "Code:";
+            lblCode.AutoSize = true;
+            lblCode.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCode.Location = new Point(50, 19);
+            lblCode.Name = "lblCode";
+            lblCode.Size = new Size(49, 21);
+            lblCode.TabIndex = 3;
+            lblCode.Text = "Code:";
+            // 
+            // lblIsbn
+            // 
+            lblIsbn.AutoSize = true;
+            lblIsbn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblIsbn.Location = new Point(52, 48);
+            lblIsbn.Name = "lblIsbn";
+            lblIsbn.Size = new Size(47, 21);
+            lblIsbn.TabIndex = 5;
+            lblIsbn.Text = "ISBN:";
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.Location = new Point(57, 77);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(42, 21);
+            lblTitle.TabIndex = 7;
+            lblTitle.Text = "Title:";
+            // 
+            // txtTitle
+            // 
+            txtTitle.Location = new Point(105, 79);
+            txtTitle.Name = "txtTitle";
+            txtTitle.PlaceholderText = "Write the book's title";
+            txtTitle.Size = new Size(194, 23);
+            txtTitle.TabIndex = 3;
+            // 
+            // txtIsbn
+            // 
+            txtIsbn.Location = new Point(105, 50);
+            txtIsbn.MaxLength = 13;
+            txtIsbn.Name = "txtIsbn";
+            txtIsbn.Size = new Size(100, 23);
+            txtIsbn.TabIndex = 2;
+            txtIsbn.KeyPress += txtIsbn_KeyPress;
+            // 
+            // lblDescription
+            // 
+            lblDescription.AutoSize = true;
+            lblDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDescription.Location = new Point(7, 106);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(92, 21);
+            lblDescription.TabIndex = 8;
+            lblDescription.Text = "Description:";
+            // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(105, 108);
+            txtDescription.MaxLength = 300;
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.PlaceholderText = "Write the description of the book";
+            txtDescription.Size = new Size(194, 188);
+            txtDescription.TabIndex = 9;
             // 
             // frmBookRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 303);
-            this.Controls.Add(this.pnlMain);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(785, 342);
-            this.MinimumSize = new System.Drawing.Size(785, 342);
-            this.Name = "frmBookRegistration";
-            this.Text = "Book Registration";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBookRegistration_FormClosing);
-            this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEdition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPages)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(808, 338);
+            Controls.Add(pnlMain);
+            MaximizeBox = false;
+            MaximumSize = new Size(824, 377);
+            MinimumSize = new Size(824, 377);
+            Name = "frmBookRegistration";
+            Text = "Book Registration";
+            FormClosing += frmBookRegistration_FormClosing;
+            pnlMain.ResumeLayout(false);
+            grpDetails.ResumeLayout(false);
+            grpDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudEdition).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPages).EndInit();
+            grpMainData.ResumeLayout(false);
+            grpMainData.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -384,5 +406,7 @@
         private Label lblPages;
         private CheckBox chkRelease;
         private Button btnRegister;
+        private GroupBox grpMainData;
+        private GroupBox grpDetails;
     }
 }
